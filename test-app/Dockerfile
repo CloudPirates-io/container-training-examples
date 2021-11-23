@@ -23,5 +23,9 @@ COPY . ./
 # Expose application on Port 8080
 EXPOSE 8080
 
-# Default start command for the image
-CMD ["node", "server.js"]
+# Default Entrypoint (overwrite with "docker run --entrypoint IMAGE")
+ENTRYPOINT [ "node" ]
+
+# Default start command for the image (overwrite with additional flags, 
+# i.e. "docker run IMAGE cmd1 cmd2 cmd3")
+CMD ["server.js"] 
