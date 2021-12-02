@@ -1,5 +1,5 @@
 # Define Base Image
-FROM node:8.16.2-alpine
+FROM node:17-alpine
 
 # Use non root for app install and run command
 RUN adduser -D -g '' app
